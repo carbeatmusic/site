@@ -104,7 +104,7 @@ header {
     background-color: #218838;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px) and (min-height: 780px) {
     .container {
         flex-direction: column;
         width: 90%;
@@ -113,5 +113,15 @@ header {
     .image-section {
         border-right: none;
         border-bottom: 1px solid #ddd;
+    }
+
+    .description-section {
+        padding: 20px;
+        width: 100%;
+    }
+
+    .description-section p {
+        display: block;
+        width: 100%;
     }
 }
