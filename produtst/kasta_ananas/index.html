@@ -4,40 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Detail Page</title>
-    <link rel="stylesheet" href="styles.css">
-    <!-- <link rel="stylesheet" href="../header.css"> -->
-    <script type="text/javascript" href="../header.js"></script>
-    <script type="text/javascript" href="script.js"></script>
-   
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../header.css"> 
+
+
+
 </head>
 <body>
-  <!--   <header><div class="header-content">
-    <a href="index.html"><img src="../../image/header/logo.png" alt="Логотип" class="logo"></a> 
-    <nav class="main_menu">
-        <a href="../../index.html" class="nav-1">Главная</a>
-        <a href="../../delivery.html" class="nav-1" style="padding: 0 10px;">Правила доставки</a>
-        <a href="https://t.me/your_telegram_channel" target="_blank" class="nav-1">Telegram</a>
-        <img src="../../image/header/telegram.png" alt="Telegram" class="telegram-icon">
-    </nav>
-    <div class="hamburger-menu mobile-only">
-        <input type="checkbox" id="menu-toggle">
-        <label for="menu-toggle" class="menu-icon" aria-expanded="false" aria-controls="menu">☰</label>
-        <div class="menu" aria-hidden="true">
-            <span class="close-btn">✖</span>
-            <a href="../../index.html">Главная</a>
-            <a href="../../delivery.html">Правила доставки</a>
-            <a href="https://t.me/your_telegram_channel" target="_blank">Telegram</a>
+<header class="header">
+        <div class="logo"><img src="../../logo.png" alt="Логотип" class="logo"></a></div>
+        <nav class="nav-links">
+            <a href="#">Главная</a>
+            <a href="#">Правила доставки</a>
+            <a href="#">Телеграмм</a>
+        </nav>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
         </div>
+         <div id="sideMenu" class="side-menu">
+        <a href="javascript:void(0)" onclick="toggleMenu()">&times;</a>
+        <a href="#" style="text-align: left;">Главная</a>
+        <a href="#" style="text-align: left;">Правила доставки</a>
+        <a href="#" style="text-align: left;">Телеграмм</a>
     </div>
-</div>
-</header> -->
+    </header>
+    
     <div class="container">
+        
         <div class="image-section">
-            <img src="casta-1(ananas).webp" alt="Product Image">
+            <div class="stock-status">В наличии</div>
+          <img src="casta-1(ananas).webp" alt="Product Image">
         </div>
         <div class="description-section">
-            <div class="stock-status">В наличии</div>
-            <h1>Купить снюс Alika Cold Portion</h1>
+           
+            <div><h1>Купить снюс Alika Cold Portion</h1></div>
             <div class="rating">★★★★☆</div>
             <p class="price">175р.</p>
             <ul>
@@ -48,7 +50,14 @@
             <p>Описание товара: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non urna vitae odio ultricies tincidunt.</p>
             <button>Купить</button>
         </div>
+        
     </div>
+     <script>
+        function toggleMenu() {
+            const sideMenu = document.getElementById('sideMenu');
+            sideMenu.style.display = sideMenu.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
    
 </body>
 </html>
